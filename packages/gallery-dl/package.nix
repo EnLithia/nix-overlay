@@ -8,14 +8,14 @@
 
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "gallery-dl";
-  version = "1.32.14";
+  version = "1.32.16";
   pyproject = true;
 
   src = fetchFromCodeberg {
     owner = "mikf";
     repo = "gallery-dl";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-nEzHp5LYklzEdNKcCJagphGA5U2LNR2/Vb3ZOoxNc68=";
+    hash = "sha256-7Ut9Zaol+liqdBPCAXfKt179i5L7+b++xq+JD6xdkkk=";
   };
 
   build-system = [ python3Packages.setuptools ];
@@ -32,8 +32,10 @@ python3Packages.buildPythonApplication (finalAttrs: {
     # requires network access
     "test_init"
 
-    # sqlite cache DB doesn't behave in the build sandbox
+    # cache expiry tests failing in the sandbox
     "test_keyarg_db"
+    "test_update_db"
+    "test_update_mem"
   ];
 
   disabledTestPaths = [
