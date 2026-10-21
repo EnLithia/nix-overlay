@@ -1,5 +1,5 @@
 self: super: {
-  nathanlithia = {
+  enlithia = {
     gallery-dl = super.callPackage ./packages/gallery-dl/package.nix {};
     yt-dlp = super.callPackage ./packages/yt-dlp/package.nix {};
     alvr = super.callPackage ./packages/alvr/package.nix {};

@@ -2,18 +2,18 @@ To add overlay use:
 ```
   nixpkgs.overlays = [
     (import (builtins.fetchTarball {
-      url = "https://github.com/NathanLithia/nix-overlay/archive/refs/heads/main.tar.gz";
+      url = "https://github.com/EnLithia/nix-overlay/archive/refs/heads/main.tar.gz";
     }))
   ];
 ```
 To install packages do:
 ```
   environment.systemPackages = with pkgs; [
-    nathanlithia.vdl
-    nathanlithia.gdl
-    nathanlithia.mdl
-    nathanlithia.mvdl
-    nathanlithia.gallery-dl
+    EnLithia.vdl
+    EnLithia.gdl
+    EnLithia.mdl
+    EnLithia.mvdl
+    EnLithia.gallery-dl
   ];
 ```
 To get a hash of a repo use:
